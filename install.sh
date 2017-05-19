@@ -8,6 +8,14 @@ else
     echo " Ok."
 fi
 
+#echo -n "Verificando variavel PATH..."
+#if ! grep -E "PATH=(.*:)?((~)|(\${HOME}))/bin(:.*)?$" ~/.bashrc 2>&1 > /dev/null ; then
+#    echo PATH=\$\{PATH\}:~/bin >> ~/.bashrc
+#    echo " Ok (nao estava no PATH)."
+#else
+#    echo " ja estava configurado."
+#fi
+
 echo -n "Verificando atalho..."
 if [ -e ~/bin/dirtools.bash ]; then
     echo " ja existia."
@@ -17,11 +25,10 @@ else
 fi
 
 echo -n "Verificando inicializacao do script..."
-if grep dirtools.bash ~/.bashrc 2>&1 > /dev/null
+if grep dirtools\\.bash ~/.bashrc 2>&1 > /dev/null
 then
     echo " ja estava configurado."
 else
-    echo ". dirtools.bash" >> ~/.bashrc
+    echo ". ~/bin/dirtools" >> ~/.bashrc
     echo " Ok."
 fi
-
