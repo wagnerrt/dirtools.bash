@@ -25,10 +25,10 @@ else
 fi
 
 echo -n "Verificando inicializacao do script..."
-if grep dirtools\\.bash ~/.bashrc 2>&1 > /dev/null
+if grep dirtools ~/.bashrc 2>&1 > /dev/null
 then
     echo " ja estava configurado."
 else
-    echo ". ~/bin/dirtools" >> ~/.bashrc
+    echo ". ~/bin/dirtools.bash" >> ~/.bashrc
     echo " Ok."
 fi
